@@ -27,8 +27,9 @@ I'm not the official developer of Ruffle. For issues and documentation related t
 
 ---
 
-# Flaru for Mobile
-> Flutter + Self-hosted package wrapped in Webview
+# Flaru for Mobile (WIP)
+
+> Flutter + Ruffle Self-hosted package wrapped in Webview
 
 ## 📢 Compatibility
 
