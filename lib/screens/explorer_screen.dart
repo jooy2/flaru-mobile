@@ -36,8 +36,28 @@ class _ExplorerScreenState extends State<ExplorerScreen> {
         appBar: AppBar(title: const Text('Explorer')),
         body: SafeArea(
             child: Column(children: [
-          const Text('Click the button below to select and run your SWF file.'),
-          IconButton(onPressed: () => _handleClickSelectSWF(context), icon: const Icon(Icons.folder_copy_outlined))
+          Card(
+              margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+              elevation: 3,
+              shape: RoundedRectangleBorder(
+                side: BorderSide(width: 1.0, color: Colors.grey.shade400),
+                borderRadius: BorderRadius.circular(20.0),
+              ),
+              child: InkWell(
+                borderRadius: BorderRadius.circular(20.0),
+                onTap: () => _handleClickSelectSWF(context),
+                child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 50),
+                    width: double.infinity,
+                    child: Column(mainAxisAlignment: MainAxisAlignment.center, children: const [
+                      Text('Click here to select the SWF file you want to run.', textAlign: TextAlign.center, style: TextStyle(fontSize: 17)),
+                      SizedBox(height: 25),
+                      Icon(
+                        Icons.folder_open_outlined,
+                        size: 40,
+                      )
+                    ])),
+              ))
         ])));
   }
 }
