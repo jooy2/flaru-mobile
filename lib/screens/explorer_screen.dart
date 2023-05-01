@@ -1,5 +1,6 @@
 import 'package:file_picker/file_picker.dart';
 import 'package:flaru/app_router.dart';
+import 'package:flaru/layouts/app_navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -34,6 +35,7 @@ class _ExplorerScreenState extends State<ExplorerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: const Text('Explorer')),
+        bottomNavigationBar: const AppNavigation(),
         body: SafeArea(
             child: Column(children: [
           Card(
