@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http_parser/http_parser.dart';
@@ -10,7 +9,9 @@ import 'package:shelf/shelf_io.dart' as io;
 import 'package:webview_flutter/webview_flutter.dart';
 
 class PlayerScreen extends StatefulWidget {
-  const PlayerScreen({Key? key}) : super(key: key);
+  const PlayerScreen({Key? key, required this.swfFilePath}) : super(key: key);
+
+  final String swfFilePath;
 
   @override
   State<PlayerScreen> createState() => _PlayerScreenState();
@@ -18,20 +19,28 @@ class PlayerScreen extends StatefulWidget {
 
 class _PlayerScreenState extends State<PlayerScreen> {
   late final WebViewController _webViewController;
-  ValueNotifier<String> _fileName = ValueNotifier('Unknown');
+  final ValueNotifier<String> _fileName = ValueNotifier('Unknown');
+  HttpServer? _localServer;
 
   @override
   void initState() {
     super.initState();
   }
 
-  Future<void> startLocalAssetServer(String swfFilePath) async {
+  @override
+  void dispose() {
+    _localServer?.close();
+
+    super.dispose();
+  }
+
+  Future<void> startLocalAssetServer() async {
     final handler = const Pipeline().addHandler((Request request) async {
       print('Request: ${request.url.path}');
 
       switch (request.url.path) {
         case "swf-asset":
-          File swfFile = File(swfFilePath);
+          File swfFile = File(widget.swfFilePath);
 
           final stat = swfFile.statSync();
           final headers = {
@@ -74,22 +83,14 @@ class _PlayerScreenState extends State<PlayerScreen> {
       }
     });
 
-    await io.serve(handler, 'localhost', 8080);
+    _localServer = await io.serve(handler, 'localhost', 8080);
     print('server running at: http://localhost:8080');
   }
 
-  Future<void> _initializeWebView() async {
-    FilePickerResult? result = await FilePicker.platform.pickFiles(
-      type: FileType.any,
-    );
+  Future<void> _initializeWebView(BuildContext context) async {
+    await startLocalAssetServer();
 
-    if (result != null) {
-      String filePath = result.files.single.path!;
-      print('Load file: $filePath');
-      await startLocalAssetServer(filePath);
-
-      _fileName.value = basename(filePath);
-    }
+    _fileName.value = basename(widget.swfFilePath);
 
     _webViewController = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
@@ -128,7 +129,7 @@ class _PlayerScreenState extends State<PlayerScreen> {
                 valueListenable: _fileName)),
         body: SafeArea(
             child: FutureBuilder(
-                future: _initializeWebView(),
+                future: _initializeWebView(context),
                 builder: (BuildContext fbContext, AsyncSnapshot snapshot) {
                   if (snapshot.connectionState == ConnectionState.done) {
                     return _createPlayerContainerWidget();

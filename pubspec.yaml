@@ -45,6 +45,7 @@ dependencies:
   path_provider: 2.0.14
   shelf: 1.4.0
   webview_flutter: 4.2.0
+  go_router: 7.0.0
 
 dev_dependencies:
   flutter_test:

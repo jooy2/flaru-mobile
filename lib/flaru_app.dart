@@ -1,4 +1,5 @@
-import 'package:flaru/screens/player_screen.dart';
+import 'package:flaru/app_router.dart';
+import 'package:flaru/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class FlaruApp extends StatelessWidget {
@@ -6,9 +7,11 @@ class FlaruApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-        title: 'Flaru',
+    return MaterialApp.router(
+        title: Constants.appName,
         debugShowCheckedModeBanner: false,
-        home: PlayerScreen());
+        routeInformationProvider: AppRouter.router.routeInformationProvider,
+        routeInformationParser: AppRouter.router.routeInformationParser,
+        routerDelegate: AppRouter.router.routerDelegate);
   }
 }
