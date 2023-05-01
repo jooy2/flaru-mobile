@@ -1,2 +1,3 @@
 # Lock files
 *-lock.json
+js/ruffle/**/*
