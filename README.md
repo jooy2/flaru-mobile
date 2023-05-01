@@ -49,7 +49,29 @@ Currently, the app installation file is not provided separately.
 
 ~~[Flaru Flash Player Release Page](https://github.com/jooy2/flaru-mobile/releases)~~
 
-## 🔧 Technical Specifications
+## 🔨 Build & Run
+
+This project is written in Dart + Flutter. For Flutter environment settings, please refer to the following documentation.
+
+https://docs.flutter.dev/get-started/install
+
+```shell
+$ flutter pub get
+```
+
+Once everything is ready, proceed with the steps below. If you do not proceed, the execution may not work correctly.
+
+The project sources do not include the `Ruffle` source files. So, before building or testing, you need to get the latest version of Ruffle self-hosted distribution.
+
+Download the latest version of the self-hosted version from the Ruffle Release Page, unzip it and paste it in the following path: `/assets/www/js/ruffle`
+
+You only need to paste the `.map`, `.js`, `.wasm` files inside the compressed file.
+
+The webview code is located in `assets/www`. We recommend applying the `eslint` and `prettier` settings to work with files located here.
+
+
+
+### 🔧 Technical Specifications
 
 - [Flutter 3.x](https://flutter.dev)
 - [Ruffle](https://ruffle.rs)

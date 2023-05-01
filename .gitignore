@@ -51,3 +51,4 @@ assets/www/node_modules/
 
 # For Ruffle
 assets/www/js/ruffle/*
+!assets/www/js/ruffle/.gitkeep
