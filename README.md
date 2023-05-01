@@ -56,7 +56,7 @@ Currently, the app installation file is not provided separately.
 
 ## 📋 License
 
-Copyright © 2022 [Jooy2](https://jooy2.com) <[jooy2.contact@gmail.com](mailto:jooy2.contact@gmail.com)> Released under the MIT license. (Source code excluding Ruffle and external modules)
+Copyright © 2022-2023 [Jooy2](https://jooy2.com) <[jooy2.contact@gmail.com](mailto:jooy2.contact@gmail.com)> Released under the MIT license. (Source code excluding Ruffle and external modules)
 
 Please use the build package only for personal testing. **Distribution of packages for production/commercial use is not permitted.**
 

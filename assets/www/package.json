@@ -1,0 +1,26 @@
+{
+  "name": "Flaru Mobile",
+  "version": "1.0.0",
+  "description": "Flaru Mobile",
+  "author": "Jmousy",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "format": "prettier src",
+    "format:fix": "prettier src --write"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.39.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard": "17.0.0",
+    "prettier": "^2.8.8",
+    "vite": "^4.3.3",
+    "vite-plugin-eslint": "1.8.1",
+    "vite-plugin-singlefile": "^0.13.5"
+  }
+}

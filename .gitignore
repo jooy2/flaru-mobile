@@ -46,8 +46,8 @@ app.*.map.json
 # Android properties
 local.properties
 
+# For Webview components
+assets/www/node_modules/
+
 # For Ruffle
 assets/www/js/ruffle/*
-
-# For Test
-assets/www/static/
