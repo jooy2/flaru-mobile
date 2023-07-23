@@ -16,7 +16,7 @@ class AppRouter {
     GoRoute(
       name: RouteNames.player.name,
       path: '/${RouteNames.player.name}',
-      builder: (context, state) => PlayerScreen(swfFilePath: state.queryParameters['path']!),
+      builder: (context, state) => PlayerScreen(swfFilePath: GoRouterState.of(context).uri.queryParameters['path']!),
     ),
     GoRoute(
       name: RouteNames.settings.name,

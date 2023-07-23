@@ -42,7 +42,7 @@ class _AppNavigationState extends State<AppNavigation> {
   }
 
   void _handleTapNavigationItem(BuildContext context, int tabIndex) {
-    if (tabIndex != _locationToTabIndex(GoRouter.of(context).location)) {
+    if (tabIndex != _locationToTabIndex(GoRouterState.of(context).uri.toString())) {
       context.replaceNamed(items[tabIndex].routerName);
     }
   }
@@ -51,7 +51,7 @@ class _AppNavigationState extends State<AppNavigation> {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       items: items.map((el) => el.item).toList(),
-      currentIndex: _locationToTabIndex(GoRouter.of(context).location),
+      currentIndex: _locationToTabIndex(GoRouterState.of(context).uri.toString()),
       onTap: (index) => _handleTapNavigationItem(context, index),
     );
   }
