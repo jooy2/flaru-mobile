@@ -15,11 +15,11 @@
     "node": ">=16.0.0"
   },
   "devDependencies": {
-    "eslint": "^8.39.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-config-standard": "17.0.0",
-    "prettier": "^2.8.8",
-    "vite": "^4.3.3",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-standard": "^17.1.0",
+    "prettier": "^3.0.2",
+    "vite": "^4.4.9",
     "vite-plugin-eslint": "1.8.1",
     "vite-plugin-singlefile": "^0.13.5"
   }
