@@ -5,8 +5,6 @@
 ![Languages](https://img.shields.io/github/languages/count/jooy2/flaru-mobile)
 [![Followers](https://img.shields.io/github/followers/jooy2?style=social)](https://github.com/jooy2)
 ![Stars](https://img.shields.io/github/stars/jooy2/flaru-mobile?style=social)
-![Commit Count](https://img.shields.io/github/commit-activity/y/jooy2/flaru-mobile)
-![Line Count](https://img.shields.io/tokei/lines/github/jooy2/flaru-mobile)
 
 
 > [!IMPORTANT]
@@ -34,7 +32,7 @@ I'm not the official developer of Ruffle. For issues and documentation related t
 
 ---
 
-# Flaru for Mobile (POC)
+# Flaru for Mobile (POC)
 
 > Flutter + Ruffle Self-hosted package wrapped in Flutter Webview
 
