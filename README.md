@@ -1,5 +1,3 @@
-<div align="center">
-
 ![flaru-logo](assets/images/logo/flaru-logo.webp)
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jooy2/flaru-mobile/blob/master/LICENSE)
@@ -10,10 +8,20 @@
 ![Commit Count](https://img.shields.io/github/commit-activity/y/jooy2/flaru-mobile)
 ![Line Count](https://img.shields.io/tokei/lines/github/jooy2/flaru-mobile)
 
-> The mobile Flaru app is intended for proof-of-concept purposes only and is not intended for release.  For another Ruffle native mobile app, check out these major projects:
-https://github.com/torokati44/ruffle-android
+
+> [!IMPORTANT]
+>
+> The mobile Flaru app is intended for proof-of-concept purposes only and is not intended for release. For another Ruffle native mobile app, check out these major projects: https://github.com/torokati44/ruffle-android
 
 > Flaru for desktop is here: https://github.com/jooy2/flaru
+
+> [!IMPORTANT]
+>
+> An app utilizing this project has been released to the app store and the project is no longer maintained.
+
+> [!NOTE]
+>
+> This application is an emulator and does not contain Flash game files (SWF).
 
 This is **Unofficial Ruffle Flash Player** Based on [Ruffle Flash Emulator](https://ruffle.rs).
 
@@ -23,31 +31,18 @@ I'm not the official developer of Ruffle. For issues and documentation related t
 
 (*This is just an emulator and does not contain any games.)
 
-</div>
 
 ---
 
-# Flaru for Mobile (WIP)
+# Flaru for Mobile (POC)
 
-> Flutter + Ruffle Self-hosted package wrapped in Webview
+> Flutter + Ruffle Self-hosted package wrapped in Flutter Webview
 
 ## 📢 Compatibility
-
-**Since the emulator is under development, some content may not run smoothly, and Flash created with ActionScript 3 as of March 2021 is not supported.**
-
-See https://github.com/ruffle-rs/ruffle/issues/1368.
 
 This app plots the emulator (built for self-hosted use) in a webview, so there may be a performance difference compared to the official Ruffle Desktop Application.
 
 There is no built-in automatic update in the app. It is recommended to download the updated emulator version by referring to the GitHub Release page on a monthly basis.
-
-## 💾 Downloads
-
-Currently, the app installation file is not provided separately.
-
-~~Please use the GitHub Release page attached below.~~
-
-~~[Flaru Flash Player Release Page](https://github.com/jooy2/flaru-mobile/releases)~~
 
 ## 🔨 Build & Run
 
@@ -69,17 +64,17 @@ You only need to paste the `.map`, `.js`, `.wasm` files inside the compressed fi
 
 The webview code is located in `assets/www`. We recommend applying the `eslint` and `prettier` settings to work with files located here.
 
-
-
 ### 🔧 Technical Specifications
 
-- [Flutter 3.x](https://flutter.dev)
+- [Flutter 3.10.x](https://flutter.dev)
 - [Ruffle](https://ruffle.rs)
 
 ## 📋 License
 
 Copyright © 2022-2024 [Jooy2](https://jooy2.com) <[jooy2.contact@gmail.com](mailto:jooy2.contact@gmail.com)> Released under the MIT license. (Source code excluding Ruffle and external modules)
 
-Please use the build package only for personal testing. **Distribution of packages for production/commercial use is not permitted.**
+> [!IMPORTANT]
+>
+> Please use the build package only for personal testing. **Distribution of packages for production/commercial use is not permitted.**
 
 For detailed license of Ruffle, please refer to the following document: [https://github.com/ruffle-rs/ruffle/blob/master/LICENSE.md](https://github.com/ruffle-rs/ruffle/blob/master/LICENSE.md)
