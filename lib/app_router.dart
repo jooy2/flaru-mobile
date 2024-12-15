@@ -1,7 +1,7 @@
-import 'package:flaru/screens/explorer_screen.dart';
-import 'package:flaru/screens/info_screen.dart';
-import 'package:flaru/screens/player_screen.dart';
-import 'package:flaru/screens/settings_screen.dart';
+import 'package:flare/screens/explorer_screen.dart';
+import 'package:flare/screens/info_screen.dart';
+import 'package:flare/screens/player_screen.dart';
+import 'package:flare/screens/settings_screen.dart';
 import 'package:go_router/go_router.dart';
 
 enum RouteNames { explorer, player, settings, info }

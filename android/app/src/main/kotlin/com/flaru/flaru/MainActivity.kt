@@ -1,4 +1,4 @@
-package com.flaru.flaru
+package com.flare.mobilePlayer
 
 import io.flutter.embedding.android.FlutterActivity
 

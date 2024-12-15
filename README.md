@@ -1,17 +1,17 @@
-![flaru-logo](assets/images/logo/flaru-logo.webp)
+![flare-logo](assets/images/logo/app-logo.webp)
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jooy2/flaru-mobile/blob/master/LICENSE)
-![Programming Language Usage](https://img.shields.io/github/languages/top/jooy2/flaru-mobile)
-![Languages](https://img.shields.io/github/languages/count/jooy2/flaru-mobile)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jooy2/flare-mobile/blob/master/LICENSE)
+![Programming Language Usage](https://img.shields.io/github/languages/top/jooy2/flare-mobile)
+![Languages](https://img.shields.io/github/languages/count/jooy2/flare-mobile)
 [![Followers](https://img.shields.io/github/followers/jooy2?style=social)](https://github.com/jooy2)
-![Stars](https://img.shields.io/github/stars/jooy2/flaru-mobile?style=social)
+![Stars](https://img.shields.io/github/stars/jooy2/flare-mobile?style=social)
 
 
 > [!IMPORTANT]
 >
-> The mobile Flaru app is intended for proof-of-concept purposes only and is not intended for release. For another Ruffle native mobile app, check out these major projects: https://github.com/torokati44/ruffle-android
+> The mobile Flare app is intended for proof-of-concept purposes only and is not intended for release. For another Ruffle native mobile app, check out these major projects: https://github.com/torokati44/ruffle-android
 
-> Flaru for desktop is here: https://github.com/jooy2/flaru
+> Flare for desktop is here: https://github.com/jooy2/flare
 
 > [!IMPORTANT]
 >
@@ -32,7 +32,7 @@ I'm not the official developer of Ruffle. For issues and documentation related t
 
 ---
 
-# Flaru for Mobile (POC)
+# Flare for Mobile (POC)
 
 > Flutter + Ruffle Self-hosted package wrapped in Flutter Webview
 

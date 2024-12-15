@@ -1,4 +1,4 @@
-import 'package:flaru/layouts/app_navigation.dart';
+import 'package:flare/layouts/app_navigation.dart';
 import 'package:flutter/material.dart';
 
 class InfoScreen extends StatefulWidget {
